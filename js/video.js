@@ -26,12 +26,14 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	video.currentTime += 15;
-	if (video.currentTime >= video.duration) {
-		video.currentTime = 0;
-		video.playbackRate = 1;
+	if (video.currentTime + 15 < video.duration) {
+		video.currentTime += 15;
+		console.log("New location: " + video.currentTime);
 	}
-	console.log("New location: " + video.currentTime);
+	else {
+		video.currentTime = 0;
+		console.log("Go back to beginning.");
+	}
 	video.play();
 });
 
