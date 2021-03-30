@@ -35,7 +35,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 		video.currentTime = 0;
 		console.log("Go back to beginning.");
 	}
-//	video.play();
+	video.play();
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
